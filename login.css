@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--preto);
+}
+
+body{
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --azul: #0056FB;
+
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.column{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+}
+
+.left{
+    background-color: var(--branco);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.left h1{
+    margin-bottom: 14px;
+}
+
+.left p{
+    user-select: none;
+}
+
+input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid var(--preto);
+    border-radius: 4px;
+}
+
+input[type="button"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-weight: bold;
+    border: 0;
+    border-radius: 4px;
+}
+
+input[type="button"]:hover{
+    cursor: pointer;
+}
+
+.right{
+    background-color: var(--azul);
+    display: flex;
+    width: 100%;
+}
+
+.photo img{
+    display: flex;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.right h1{
+    color: var(--branco);
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.right p{
+    color: var(--branco);
+}
+
+@media screen and (max-width: 980px){
+    .right h1{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 730px){
+    main{
+        flex-direction: column;
+    }
+
+    /* .column{
+        padding: 0;
+        margin: auto;
+    } */
+}
